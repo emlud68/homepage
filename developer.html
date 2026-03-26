@@ -39,7 +39,7 @@
   </head>
 
   <body>
-    <nav class="nav-container">
+    <nav id="nav-container">
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div>
-          <h5>Guardian Initiative</h5>
+          <h5>Solution Proposal</h5>
           <p>Solution proposal for The Guardian Initiative</p>
           <div class="large-image shadow">
             <a
@@ -146,5 +146,18 @@
         </a>
       </div>
     </section>
+
+    <script>
+      const nav = document.getElementById("nav-container");
+      const SCROLL_THRESHOLD = 50;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > SCROLL_THRESHOLD) {
+          nav.classList.add("nav-hidden");
+        } else {
+          nav.classList.remove("nav-hidden");
+        }
+      });
+    </script>
   </body>
 </html>

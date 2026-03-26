@@ -76,19 +76,24 @@ button {
   margin-bottom: 40px;
 }
 
-.nav-container {
+#nav-container {
   padding: 20px 0;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: lightblue;
+  transition: transform 0.3s ease;
 
   a {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
   }
+}
+
+#nav-container.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .artistic-section {

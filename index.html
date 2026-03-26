@@ -36,23 +36,10 @@
     ></script>
     <link href="styles.css" rel="stylesheet" />
     <title>My Webpage</title>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const greeting = document.getElementById("greeting");
-        const hour = new Date().getHours();
-        const timeOfDay =
-          hour < 12
-            ? "Good morning! 🌞"
-            : hour < 18
-              ? "Good afternoon! 🌆"
-              : "Good evening! 🕚";
-        greeting.textContent = timeOfDay;
-      });
-    </script>
   </head>
 
   <body>
-    <nav class="nav-container">
+    <nav id="nav-container">
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
@@ -131,11 +118,11 @@
         </p>
         <p>
           My mom started a Music School in the Philippines, in which me and my
-          brother were appointed as music teachers unttil now the pressent day.
+          brother were appointed as music teachers until now the pressent day.
           The power of music can never be suffocated, even in tight times like
-          Covid19, my mom's music school continued to to provide education,
-          through online classes, in which, we could always be united in
-          collboration, singing the gobal language of music.
+          Covid19, my mom's music school continued to provide education, through
+          online classes, in which, we could always be united in collboration,
+          singing the gobal language of music.
         </p>
         <p>
           Check out this music collaboration with our students during Covid19 in
@@ -170,5 +157,28 @@
         >
       </section>
     </div>
+
+    <script>
+      const greeting = document.getElementById("greeting");
+      const hour = new Date().getHours();
+      const timeOfDay =
+        hour < 12
+          ? "Good morning! 🌞"
+          : hour < 18
+            ? "Good afternoon! 🌆"
+            : "Good evening! 🕚";
+      greeting.textContent = timeOfDay;
+
+      const nav = document.getElementById("nav-container");
+      const SCROLL_THRESHOLD = 50;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > SCROLL_THRESHOLD) {
+          nav.classList.add("nav-hidden");
+        } else {
+          nav.classList.remove("nav-hidden");
+        }
+      });
+    </script>
   </body>
 </html>

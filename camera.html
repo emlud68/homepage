@@ -38,7 +38,7 @@
     <title>My Webpage</title>
   </head>
   <body>
-    <nav class="nav-container">
+    <nav id="nav-container">
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
@@ -1648,5 +1648,18 @@
         </div>
       </section>
     </div>
+
+    <script>
+      const nav = document.getElementById("nav-container");
+      const SCROLL_THRESHOLD = 50;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > SCROLL_THRESHOLD) {
+          nav.classList.add("nav-hidden");
+        } else {
+          nav.classList.remove("nav-hidden");
+        }
+      });
+    </script>
   </body>
 </html>
