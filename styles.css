@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  #main {
+    width: 80%;
+  }
+}
+
+@media (max-width: 920px) {
+  #main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  #main {
+    width: 95%;
+  }
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 4rem;
+}
+
+.hero-photo {
+  flex: 0 1 auto;
+  min-width: 0;
+  height: auto;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 350px;
+}
+
+img {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.hero-description {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.about-me {
+  text-align: center;
+
+  p {
+    text-align: left;
+  }
+}
+
+section {
+  margin: 40px 0;
+}
+
+button {
+  margin-bottom: 40px;
+}
+
+.nav-container {
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: lightblue;
+
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+.artistic-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.flex-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.large-image {
+  max-width: 700px;
+}
+
+.insta {
+  max-width: 300px;
+}
+
+.insta-horizontal {
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.fit-container {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display: block;
+}
+
+.solo {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+iframe {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+.music-follow-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.robotics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.robotics-photo-container {
+  max-width: 450px;
+}
+
+.shadow {
+  box-shadow: 10px 10px 5px black;
+}
+
+.chess-header-photo-container {
+  max-width: 450px;
+
+  img {
+    border-radius: 30%;
+  }
+}
+
+.square-crop {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.circle {
+  border-radius: 50%;
+}
